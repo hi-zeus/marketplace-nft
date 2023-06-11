@@ -51,6 +51,7 @@ export const SellConfirmModalWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   p {
+    padding-top: 24px;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
@@ -61,7 +62,7 @@ export const SellConfirmModalWrapper = styled.div`
 `;
 
 export const IconWrapper = styled.div`
-  padding: 24px 0;
+  padding: 24px 0 0;
 `;
 
 export const ButtonGroup = styled.div`

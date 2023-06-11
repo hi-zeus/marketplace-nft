@@ -10,6 +10,8 @@ export type SocialButtonsGroupProps = {
 export type InputProps = {
   label?: string;
   error?: string;
+  desc?: string;
+  code?: string;
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
 export type ButtonProps = {
@@ -101,6 +103,8 @@ export type ModalProps = {
 
 export type SellModalProps = {} & ModalProps;
 
+export type ProfileModalProps = { title: string } & ModalProps;
+
 export type SelectBoxProps = {
   placeholder?: string;
   value?: string;
@@ -112,4 +116,32 @@ export type SelectOptionProps = {
   label: string;
   value: string;
   checked?: boolean;
+};
+
+export type ProfileProps = {
+  username: string;
+  name: string;
+  phone: string;
+  email: string;
+  password: string;
+  onEdit?: (key: string) => void;
+};
+
+export type ProfileItemProps = {
+  id: string;
+  label: string;
+  value: string;
+  type?: "text" | "password";
+  isRequired?: boolean;
+  isEditable?: boolean;
+  onEdit?: (key: string) => void;
+};
+
+export type ProfileEditProps = {
+  onBack: () => void;
+} & React.HTMLAttributes<HTMLElement>;
+
+export type NotifyProps = {
+  text: string;
+  show: boolean;
 };

@@ -133,6 +133,10 @@ export const HeaderButton = styled.div<{ width?: number }>`
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.05);
+  &.active {
+    background: #636363;
+    color: #fff;
+  }
   box-shadow: 1px 1.5px 3px rgba(0, 0, 0, 0.2);
   border-radius: 7.04px;
   font-weight: 600;

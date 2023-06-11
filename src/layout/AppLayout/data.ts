@@ -28,6 +28,15 @@ export const headerData = [
     label: "Learn to play",
     to: "/learn",
   },
+  {
+    label: "",
+    to: "/profile",
+    children: [
+      { label: "Profile", to: "" },
+      { label: "Claims", to: "claims" },
+      { label: "Transactions", to: "transactions" },
+    ],
+  },
 ];
 
 export const notifications = [

@@ -52,15 +52,17 @@ export const Header: React.FC = () => {
         <MainHeaderContainer>
           <HeaderLogo />
           <HeaderMenuWrapper>
-            {headerData.map((item, key) => (
-              <HeaderNavItem
-                key={key}
-                to={item.to}
-                active={currentPath?.to === item.to ? "true" : undefined}
-              >
-                {item.label}
-              </HeaderNavItem>
-            ))}
+            {headerData
+              .filter((f) => f.label !== "")
+              .map((item, key) => (
+                <HeaderNavItem
+                  key={key}
+                  to={item.to}
+                  active={currentPath?.to === item.to ? "true" : undefined}
+                >
+                  {item.label}
+                </HeaderNavItem>
+              ))}
           </HeaderMenuWrapper>
           {currentUser ? (
             <HeaderButtonGroup>
@@ -68,7 +70,11 @@ export const Header: React.FC = () => {
                 <IconCoins />
                 <span>$1,325.00</span>
               </HeaderButton>
-              <HeaderButton width={124}>
+              <HeaderButton
+                width={124}
+                className={currentPath?.to === "/profile" ? "active" : ""}
+                onClick={() => navigate("/profile/")}
+              >
                 <IconProfile />
                 <span>Username</span>
               </HeaderButton>

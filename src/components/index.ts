@@ -7,6 +7,8 @@ export * from "./HeaderLogo";
 export * from "./Icons";
 export * from "./Input";
 export * from "./Modals";
+export * from "./NotificationItem";
+export * from "./Notify";
 export * from "./PredictionCard";
 export * from "./SelectBox";
 export * from "./SocialAuthButton";

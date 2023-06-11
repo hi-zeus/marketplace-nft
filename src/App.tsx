@@ -19,6 +19,7 @@ import {
   PredictionsPage,
   CommingSoonPage,
   NotFoundPage,
+  ProfilePage,
 } from "./pages";
 
 const App: React.FC = () => {
@@ -47,6 +48,9 @@ const App: React.FC = () => {
           <Route path="/buy" element={<CommingSoonPage />} />
           <Route path="/marketplace" element={<CommingSoonPage />} />
           <Route path="/learn" element={<CommingSoonPage />} />
+          {/* Profile Routes */}
+          <Route path="/profile" element={<ProfilePage />} />
+          {/* Profile Routes */}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Router>

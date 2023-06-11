@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const ProfileSectionWrapper = styled.div`
   max-width: 400px;
-  width: 100%;
+  width: 95%;
   margin-top: 65px;
   background: #ffffff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);

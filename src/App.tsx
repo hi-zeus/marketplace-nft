@@ -20,6 +20,8 @@ import {
   CommingSoonPage,
   NotFoundPage,
   ProfilePage,
+  ClaimsPage,
+  TransactionsPage,
 } from "./pages";
 
 const App: React.FC = () => {
@@ -50,6 +52,8 @@ const App: React.FC = () => {
           <Route path="/learn" element={<CommingSoonPage />} />
           {/* Profile Routes */}
           <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/profile/claims" element={<ClaimsPage />} />
+          <Route path="/profile/transactions" element={<TransactionsPage />} />
           {/* Profile Routes */}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

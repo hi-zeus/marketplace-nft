@@ -105,6 +105,13 @@ export const AppContainer = styled.div<{ issubmenu?: string }>`
 export const HeaderButtonGroup = styled.div`
   display: flex;
   align-items: center;
+  .login-button {
+    width: 124px;
+    height: 47px;
+    & > :not(:first-child) {
+      margin-left: 16px;
+    }
+  }
   & > :not(:first-child) {
     margin-left: 18px;
   }

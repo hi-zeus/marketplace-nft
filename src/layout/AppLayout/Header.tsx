@@ -15,20 +15,28 @@ import {
   SubMenuItem,
 } from "./styles";
 import {
+  Button,
   HeaderLogo,
   IconAlarm,
   IconCoins,
+  IconLogout,
   IconMenu,
   IconProfile,
 } from "../../components";
 import { headerData } from "./data";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { AppHeaderMenuItemProps } from "../../types";
 // import { Notification } from "./Notification";
 
 export const Header: React.FC = () => {
+  const navigate = useNavigate();
   const location = useLocation();
   const [currentPath, setCurrentPath] = useState<AppHeaderMenuItemProps>();
+  const [currentUser, setCurrentUser] = useState<string | null>("");
+
+  useEffect(() => {
+    setCurrentUser(localStorage.getItem("auth"));
+  }, []);
 
   useEffect(() => {
     setCurrentPath(
@@ -54,23 +62,35 @@ export const Header: React.FC = () => {
               </HeaderNavItem>
             ))}
           </HeaderMenuWrapper>
-          <HeaderButtonGroup>
-            <HeaderButton width={124}>
-              <IconCoins />
-              <span>$1,325.00</span>
-            </HeaderButton>
-            <HeaderButton width={124}>
-              <IconProfile />
-              <span>Username</span>
-            </HeaderButton>
-            <NotificationButtonWrapper>
-              <HeaderButton>
-                <IconAlarm />
-                <Badge>5</Badge>
+          {currentUser ? (
+            <HeaderButtonGroup>
+              <HeaderButton width={124}>
+                <IconCoins />
+                <span>$1,325.00</span>
               </HeaderButton>
-              {/* <Notification /> */}
-            </NotificationButtonWrapper>
-          </HeaderButtonGroup>
+              <HeaderButton width={124}>
+                <IconProfile />
+                <span>Username</span>
+              </HeaderButton>
+              <NotificationButtonWrapper>
+                <HeaderButton>
+                  <IconAlarm />
+                  <Badge>5</Badge>
+                </HeaderButton>
+                {/* <Notification /> */}
+              </NotificationButtonWrapper>
+            </HeaderButtonGroup>
+          ) : (
+            <HeaderButtonGroup>
+              <Button
+                className="login-button"
+                onClick={() => navigate("/signin")}
+              >
+                <IconLogout />
+                <span>Log In</span>
+              </Button>
+            </HeaderButtonGroup>
+          )}
           <MobileMenuButton>
             <HeaderButton>
               <IconMenu />

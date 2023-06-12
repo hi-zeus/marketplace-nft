@@ -23,6 +23,10 @@ import {
   ClaimsPage,
   TransactionsPage,
   BuyPackPage,
+  MarketplacePage,
+  MarketplaceIdentitiesPage,
+  MarketplacePredictionPage,
+  MarketplacePacksPage,
 } from "./pages";
 
 const App: React.FC = () => {
@@ -47,9 +51,20 @@ const App: React.FC = () => {
           <Route path="/dashboard/predictions" element={<PredictionsPage />} />
           <Route path="/dashboard/packs" element={<CommingSoonPage />} />
           {/* Dashboard Routes */}
+          {/* Marketplace Routes */}
+          <Route path="/marketplace" element={<MarketplacePage />} />
+          <Route
+            path="/marketplace/identities"
+            element={<MarketplaceIdentitiesPage />}
+          />
+          <Route
+            path="/marketplace/predictions"
+            element={<MarketplacePredictionPage />}
+          />
+          <Route path="/marketplace/packs" element={<MarketplacePacksPage />} />
+          {/* Marketplace Routes */}
           <Route path="/crafting" element={<CommingSoonPage />} />
           <Route path="/buy" element={<BuyPackPage />} />
-          <Route path="/marketplace" element={<CommingSoonPage />} />
           <Route path="/learn" element={<CommingSoonPage />} />
           {/* Profile Routes */}
           <Route path="/profile" element={<ProfilePage />} />

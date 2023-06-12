@@ -58,7 +58,7 @@ export type FeedItemProps = {
   tags: string[];
 };
 
-export type NotificationProps = {
+export type NotificationItemProps = {
   date: string;
   title: string;
   desc: string;
@@ -178,4 +178,9 @@ export type BuyDetailsProps = {
   id: string | number;
   onClose: () => void;
   isView: boolean;
+};
+
+export type NotificationProps = {
+  open: boolean;
+  onClose: () => void;
 };

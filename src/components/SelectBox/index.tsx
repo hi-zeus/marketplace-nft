@@ -51,7 +51,7 @@ export const SelectBox: React.FC<SelectBoxProps> = ({
     <SelectBoxWrapper ref={optionRef}>
       {label && <p>{label}</p>}
       <SelectBoxContainer
-        border={border}
+        border={border ? "true" : undefined}
         onClick={() => setIsOption((prev) => !prev)}
       >
         <SelectBoxTextWrapper>

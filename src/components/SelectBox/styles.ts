@@ -11,7 +11,7 @@ export const SelectBoxWrapper = styled.div`
   }
 `;
 
-export const SelectBoxContainer = styled.div<{ border?: boolean }>`
+export const SelectBoxContainer = styled.div<{ border?: string }>`
   background: #ffffff;
   border-radius: 4px;
   height: 40px;

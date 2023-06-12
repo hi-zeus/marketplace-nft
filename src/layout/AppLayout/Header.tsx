@@ -29,11 +29,12 @@ import {
 import { headerData } from "./data";
 import { useLocation, useNavigate } from "react-router-dom";
 import { AppHeaderMenuItemProps } from "../../types";
-// import { Notification } from "./Notification";
+import { Notification } from "./Notification";
 
 export const Header: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [notification, setNotification] = useState(false);
   const [balanceModal, setBalanceModal] = useState(false);
   const [withdrawModal, setWithdrawModal] = useState(false);
   const [confirmModal, setConfirmModal] = useState(false);
@@ -104,11 +105,14 @@ export const Header: React.FC = () => {
                   <span>Username</span>
                 </HeaderButton>
                 <NotificationButtonWrapper>
-                  <HeaderButton>
+                  <HeaderButton onClick={() => setNotification(true)}>
                     <IconAlarm />
                     <Badge>5</Badge>
                   </HeaderButton>
-                  {/* <Notification /> */}
+                  <Notification
+                    open={notification}
+                    onClose={() => setNotification(false)}
+                  />
                 </NotificationButtonWrapper>
               </HeaderButtonGroup>
             ) : (

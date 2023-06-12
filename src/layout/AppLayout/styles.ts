@@ -178,13 +178,26 @@ export const MobileMenuButton = styled.div`
   }
 `;
 
-export const NotificationWrapper = styled.div`
+export const CloseButton = styled.div`
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  right: 17px;
+  top: 12px;
+`;
+
+export const NotificationWrapper = styled.div<{ open: boolean }>`
   position: absolute;
   right: 0;
   z-index: 11;
   top: 60px;
   width: 400px;
   padding: 20px 25px;
+  opacity: ${({ open }) => (open ? 1 : 0)};
+  visibility: ${({ open }) => (open ? "visible" : "hidden")};
   background: #ffffff;
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.2);
   border-radius: 8px;

@@ -23,6 +23,12 @@ export const headerData = [
   {
     label: "Marketplace",
     to: "/marketplace",
+    children: [
+      { label: "Cards", to: "" },
+      { label: "Identities", to: "identities" },
+      { label: "Predictions", to: "predictions" },
+      { label: "Card Packs", to: "packs" },
+    ],
   },
   {
     label: "Learn to play",

@@ -16,6 +16,7 @@ export type InputProps = {
 
 export type ButtonProps = {
   disabled?: boolean;
+  variant?: string;
 } & React.HTMLAttributes<HTMLElement>;
 
 export type checkEmailFormProps = {
@@ -105,6 +106,14 @@ export type SellModalProps = {} & ModalProps;
 
 export type ProfileModalProps = { title: string } & ModalProps;
 
+export type UseBalanceBuyModalProps = {
+  onBuyClick: () => void;
+} & ModalProps;
+
+export type BalanceBuyConfirmModalProps = {
+  onConfirm: () => void;
+} & ModalProps;
+
 export type SelectBoxProps = {
   placeholder?: string;
   value?: string;
@@ -144,4 +153,17 @@ export type ProfileEditProps = {
 export type NotifyProps = {
   text: string;
   show: boolean;
+};
+
+export type BuyPackProps = {
+  onCardClick: (id: string | number) => void;
+  onBuyClick: (id: string | number) => void;
+  cardType: string;
+  price: number;
+};
+
+export type BuyDetailsProps = {
+  id: string | number;
+  onClose: () => void;
+  isView: boolean;
 };

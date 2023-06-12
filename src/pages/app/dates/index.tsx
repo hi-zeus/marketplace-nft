@@ -21,12 +21,12 @@ export const DatesPage: React.FC = () => {
   const navigate = useNavigate();
   const [currentUser, setCurrentUser] = useState<string | null>("");
   const [isView, setIsView] = useState<"view" | "sell" | "">("");
+  const [modal, setModal] = useState(false);
 
   useEffect(() => {
     setCurrentUser(localStorage.getItem("auth"));
   }, []);
 
-  const [modal, setModal] = useState(false);
   const handleSellConfirm = () => {
     setModal(true);
     setIsView("");

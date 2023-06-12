@@ -1,6 +1,7 @@
 export * from "./AuthFormGroup";
 export * from "./AuthFormTitle";
 export * from "./Button";
+export * from "./BuyCard";
 export * from "./DateCard";
 export * from "./FeedItem";
 export * from "./HeaderLogo";

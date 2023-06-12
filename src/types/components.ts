@@ -104,6 +104,10 @@ export type ModalProps = {
 
 export type SellModalProps = {} & ModalProps;
 
+export type WithdrawConfirmModalProps = {
+  status: "success" | "failed";
+} & ModalProps;
+
 export type ProfileModalProps = { title: string } & ModalProps;
 
 export type UseBalanceBuyModalProps = {
@@ -116,14 +120,22 @@ export type BalanceBuyConfirmModalProps = {
 
 export type SelectBoxProps = {
   placeholder?: string;
-  value?: string;
+  border?: boolean;
+  label?: string;
+  value?: string | Array<string>;
   isFilter?: boolean;
   options: SelectOptionProps[];
+  onChange?: (value: string | Array<string>) => void;
 };
+
+export type WithdrawModalProps = {
+  onWithdraw: (status?: boolean) => void;
+} & ModalProps;
 
 export type SelectOptionProps = {
   label: string;
   value: string;
+  image?: string;
   checked?: boolean;
 };
 

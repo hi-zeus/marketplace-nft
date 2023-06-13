@@ -1,3 +1,5 @@
+import { CardActionTypes } from "./common";
+
 export type SocialAuthButtonProps = {
   socialType: "Google" | "Facebook" | "Apple";
   onClick: () => void;
@@ -102,7 +104,10 @@ export type ModalProps = {
   open: boolean;
 } & React.HTMLAttributes<HTMLElement>;
 
-export type SellModalProps = {} & ModalProps;
+export type SellModalProps = {
+  isMarket?: boolean;
+  isOffer?: boolean;
+} & ModalProps;
 
 export type WithdrawConfirmModalProps = {
   status: "success" | "failed";
@@ -116,6 +121,7 @@ export type UseBalanceBuyModalProps = {
 
 export type BalanceBuyConfirmModalProps = {
   onConfirm: () => void;
+  isOffer?: boolean;
 } & ModalProps;
 
 export type SelectBoxProps = {
@@ -183,4 +189,14 @@ export type BuyDetailsProps = {
 export type NotificationProps = {
   open: boolean;
   onClose: () => void;
+};
+
+export type MarketCardProps = {
+  image: string;
+  name: string;
+  type: string;
+  rarity: string;
+  status?: string;
+  owned?: string | number;
+  onCard?: (id: string | number, action: CardActionTypes) => void;
 };

@@ -14,9 +14,11 @@ import {
   Button,
   BuyPackConfirmModal,
   IconArrowDown,
+  IconCardAthlete,
   IconCoins,
   IconPay,
   MarketCard,
+  PredictionCard,
   UseBalanceBuyModal,
 } from "../../components";
 import {
@@ -81,6 +83,15 @@ export const MBuyCardSection: React.FC<CardSidebarProps> = ({
                   name=""
                   rarity="Rare"
                   type=""
+                />
+              )}
+              {page === "identities" && (
+                <PredictionCard
+                  icon={<IconCardAthlete />}
+                  iconText="Athlete"
+                  name=""
+                  type="Rare"
+                  height={298}
                 />
               )}
             </ViewCardWrapper>

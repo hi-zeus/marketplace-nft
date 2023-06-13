@@ -8,7 +8,6 @@ import {
   MBuyCardSection,
   MCardGridSection,
   MFilterSection,
-  MOfferCardSection,
   MSellCardSection,
   MViewCardSection,
 } from "../../../modules";
@@ -48,7 +47,6 @@ export const MarketplacePacksPage: React.FC = () => {
         onClose={handleSideClose}
         page="packs"
       />
-      <MOfferCardSection open={side === "offer"} onClose={handleSideClose} />
     </AppLayout>
   );
 };

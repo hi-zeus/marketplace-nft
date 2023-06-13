@@ -134,3 +134,75 @@ export const cardData = [
     rarity: "Rare",
   },
 ];
+
+export const packData = [
+  {
+    image: "/assets/buy.png",
+    name: "BoredApe",
+    rarity: "Rare",
+  },
+  {
+    image: "/assets/buy.png",
+    name: "BoredApe",
+    rarity: "Rare",
+    owned: 1,
+  },
+  {
+    image: "/assets/buy.png",
+    name: "BoredApe",
+    rarity: "Rare",
+    status: "For Sale",
+  },
+  {
+    image: "/assets/buy.png",
+    name: "BoredApe",
+    rarity: "Rare",
+    status: "For Sale",
+    owned: 1,
+  },
+  {
+    image: "/assets/buy.png",
+    name: "BoredApe",
+    rarity: "Rare",
+    owned: 2,
+  },
+  {
+    image: "/assets/buy.png",
+    name: "BoredApe",
+    rarity: "Rare",
+  },
+  {
+    image: "/assets/buy.png",
+    name: "BoredApe",
+    rarity: "Rare",
+    status: "For Sale",
+    owned: 1,
+  },
+  {
+    image: "/assets/buy.png",
+    name: "BoredApe",
+    rarity: "Rare",
+  },
+  {
+    image: "/assets/buy.png",
+    name: "BoredApe",
+    rarity: "Rare",
+  },
+  {
+    image: "/assets/buy.png",
+    name: "BoredApe",
+    rarity: "Rare",
+  },
+  {
+    image: "/assets/buy.png",
+    name: "BoredApe",
+    rarity: "Rare",
+    status: "For Sale",
+    owned: 3,
+  },
+  {
+    image: "/assets/buy.png",
+    name: "BoredApe",
+    rarity: "Rare",
+  },
+];

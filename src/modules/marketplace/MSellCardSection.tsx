@@ -20,6 +20,7 @@ import {
 
 export const MSellCardSection: React.FC<CardSidebarProps> = ({
   open,
+  page,
   onClose,
 }) => {
   const [modal, setModal] = useState(false);
@@ -38,12 +39,22 @@ export const MSellCardSection: React.FC<CardSidebarProps> = ({
           <CloseButton onClick={onClose}>&times;</CloseButton>
           <h2>Sell Date Card</h2>
           <ViewCardWrapper>
-            <MarketCard
-              image="/assets/nfts/1.png"
-              name=""
-              rarity="Rare"
-              type=""
-            />
+            {!page && (
+              <MarketCard
+                image="/assets/nfts/1.png"
+                name=""
+                rarity="Rare"
+                type=""
+              />
+            )}
+            {page === "packs" && (
+              <MarketCard
+                image="/assets/buy.png"
+                name=""
+                rarity="Rare"
+                type=""
+              />
+            )}
           </ViewCardWrapper>
           <PropertiesWrapper>
             <PropertiesHeader>

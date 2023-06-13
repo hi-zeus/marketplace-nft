@@ -194,7 +194,7 @@ export type NotificationProps = {
 export type MarketCardProps = {
   image: string;
   name: string;
-  type: string;
+  type?: string;
   rarity: string;
   status?: string;
   owned?: string | number;

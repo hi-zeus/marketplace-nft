@@ -29,6 +29,7 @@ import {
 export const MBuyCardSection: React.FC<CardSidebarProps> = ({
   onClose,
   open,
+  page,
 }) => {
   const [step, setStep] = useState(0);
   const [useBalance, setUseBalance] = useState(false);
@@ -66,12 +67,22 @@ export const MBuyCardSection: React.FC<CardSidebarProps> = ({
             <CloseButton onClick={onClose}>&times;</CloseButton>
             <h2>Buy Card</h2>
             <ViewCardWrapper>
-              <MarketCard
-                image="/assets/nfts/1.png"
-                name=""
-                rarity="Rare"
-                type=""
-              />
+              {!page && (
+                <MarketCard
+                  image="/assets/nfts/1.png"
+                  name=""
+                  rarity="Rare"
+                  type=""
+                />
+              )}
+              {page === "packs" && (
+                <MarketCard
+                  image="/assets/buy.png"
+                  name=""
+                  rarity="Rare"
+                  type=""
+                />
+              )}
             </ViewCardWrapper>
             <PropertiesWrapper>
               <PropertiesHeader>

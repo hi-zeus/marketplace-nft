@@ -26,6 +26,24 @@ export const cardTypeOption = [
   },
 ];
 
+export const triggerTypeOption = [
+  {
+    label: "Major",
+    value: "major",
+    checked: false,
+  },
+  {
+    label: "Minor Tier1",
+    value: "minor1",
+    checked: false,
+  },
+  {
+    label: "Minor Tier2",
+    value: "minor2",
+    checked: false,
+  },
+];
+
 export const collectionOption = [
   {
     label: "Conception",

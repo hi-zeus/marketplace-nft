@@ -94,6 +94,15 @@ export const MBuyCardSection: React.FC<CardSidebarProps> = ({
                   height={298}
                 />
               )}
+              {page === "predictions" && (
+                <PredictionCard
+                  image="/assets/nfts/2.png"
+                  name="Tom Brady"
+                  type="Rare"
+                  height={298}
+                  amount={3}
+                />
+              )}
             </ViewCardWrapper>
             <PropertiesWrapper>
               <PropertiesHeader>

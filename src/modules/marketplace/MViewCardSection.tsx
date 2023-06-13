@@ -46,6 +46,15 @@ export const MViewCardSection: React.FC<CardSidebarProps> = ({
               height={298}
             />
           )}
+          {page === "predictions" && (
+            <PredictionCard
+              image="/assets/nfts/2.png"
+              name="Tom Brady"
+              type="Rare"
+              height={298}
+              amount={3}
+            />
+          )}
         </ViewCardWrapper>
         {!page && (
           <PropertiesWrapper>
@@ -143,6 +152,32 @@ export const MViewCardSection: React.FC<CardSidebarProps> = ({
               <PropertyItem>
                 <p>Collection</p>
                 <span>Conception</span>
+              </PropertyItem>
+            </PropertiesContent>
+          </PropertiesWrapper>
+        )}
+        {page === "predictions" && (
+          <PropertiesWrapper>
+            <PropertiesHeader>
+              <span>Properties</span>
+              <IconArrowDown />
+            </PropertiesHeader>
+            <PropertiesContent>
+              <PropertyItem>
+                <p>Rarity</p>
+                <span>Rare</span>
+              </PropertyItem>
+              <PropertyItem>
+                <p>Type</p>
+                <span>Year</span>
+              </PropertyItem>
+              <PropertyItem>
+                <p>Year</p>
+                <span>2023</span>
+              </PropertyItem>
+              <PropertyItem>
+                <p>Collection</p>
+                <span>Sports Series</span>
               </PropertyItem>
             </PropertiesContent>
           </PropertiesWrapper>

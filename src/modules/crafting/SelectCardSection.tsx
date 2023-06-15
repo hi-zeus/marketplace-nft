@@ -13,7 +13,9 @@ import { IconSort, SelectBox } from "../../components";
 import { craftingCardData, raritiesOption, statusOption } from "./data";
 import { SortButton } from "../app/dates/styles";
 
-export const SelectCardSection: React.FC = () => {
+export const SelectCardSection: React.FC<{
+  page: "identity" | "prediction";
+}> = ({ page }) => {
   const [clickedCard, setClickedCard] = useState<number>(-1);
 
   const handleCardClick = (id: number) => {

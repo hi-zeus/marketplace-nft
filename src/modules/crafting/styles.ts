@@ -224,6 +224,7 @@ export const MatchListSectionWrapper = styled.div`
     line-height: 17px;
     margin-top: 4px;
     margin-bottom: 26px;
+    padding: 0 46px;
   }
 `;
 

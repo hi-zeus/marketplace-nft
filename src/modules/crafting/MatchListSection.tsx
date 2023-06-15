@@ -12,12 +12,18 @@ import {
 import { IconInfo } from "../../components";
 import { matchList } from "./data";
 
-export const MatchListSection: React.FC = () => {
+export const MatchListSection: React.FC<{
+  page: "identity" | "prediction";
+}> = ({ page }) => {
   const [collapsed, setCollapsed] = useState<number>(-1);
   return (
     <MatchListSectionWrapper>
-      <h2>Identity Matches</h2>
-      <p>Click for recipe</p>
+      <h2>{page === "identity" ? "Identity Matches" : "Eligible Triggers"}</h2>
+      <p>
+        {page === "identity"
+          ? "Click for recipe"
+          : "Only triggers relevant to selected identity are showing. Click to open item."}
+      </p>
       <MatchListGroup>
         {matchList.map((item, key) => (
           <MatchListItem

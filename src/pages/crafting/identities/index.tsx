@@ -13,12 +13,12 @@ export const CraftingIdentitesPage: React.FC = () => {
     <AppLayout noFooter>
       <CraftingWrapper>
         <CraftLeftWrapper>
-          <CraftSection />
-          <SelectCardSection />
+          <CraftSection page="identity" />
+          <SelectCardSection page="identity" />
         </CraftLeftWrapper>
         <CraftRightWrapper>
-          <MatchListSection />
-          <CardPreviewSection />
+          <MatchListSection page="identity" />
+          <CardPreviewSection page="identity" />
         </CraftRightWrapper>
       </CraftingWrapper>
     </AppLayout>

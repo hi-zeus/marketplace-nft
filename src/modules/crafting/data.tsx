@@ -23,6 +23,22 @@ export const identityCraft = [
   },
 ];
 
+export const predictionCraft = [
+  {
+    title: "Crafting",
+    key: "crafting",
+  },
+
+  {
+    title: "Identity",
+    key: "identity",
+  },
+  {
+    title: "Trigger",
+    key: "trigger",
+  },
+];
+
 export const raritiesOption = [
   {
     label: "Free to Play",

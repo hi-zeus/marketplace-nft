@@ -8,7 +8,9 @@ import {
 } from "../app/dates/styles";
 import { IconArrowDown } from "../../components";
 
-export const CardPreviewSection: React.FC = () => {
+export const CardPreviewSection: React.FC<{
+  page: "identity" | "prediction";
+}> = ({ page }) => {
   return (
     <CardPreviewSectionWrapper>
       <h2>Preview</h2>

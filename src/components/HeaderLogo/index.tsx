@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 export const HeaderLogo: React.FC = () => {
   const navigate = useNavigate();
   return (
-    <HeaderLogoWrapper onClick={() => navigate("/dashboard")}>
+    <HeaderLogoWrapper onClick={() => navigate("/dashboard/home")}>
       TwoTwentyK
     </HeaderLogoWrapper>
   );

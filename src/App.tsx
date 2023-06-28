@@ -79,7 +79,11 @@ const App: React.FC = () => {
             />
             {/* Crafting Routes */}
             {/* Marketplace Routes */}
-            <Route path="/marketplace" element={<MarketplacePage />} />
+            <Route
+              path="/marketplace"
+              element={<Navigate to={"/marketplace/cards"} />}
+            />
+            <Route path="/marketplace/cards" element={<MarketplacePage />} />
             <Route
               path="/marketplace/identities"
               element={<MarketplaceIdentitiesPage />}

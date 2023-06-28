@@ -198,6 +198,7 @@ export const CraftSection: React.FC<{
                     )[0]?.image
                   }
                   className="crafting-card"
+                  onClick={() => onCraftChanged(item.key)}
                 >
                   {nftData[item.key].filter(
                     (f: any) => f.id === Number(selectedCards[item.key])
@@ -239,6 +240,7 @@ export const CraftSection: React.FC<{
                           )[0]?.image
                         }
                         className="crafting-card"
+                        onClick={() => onCraftChanged(item.key)}
                       >
                         {nftData[item.key].filter(
                           (f: any) => f.id === Number(selectedCards[item.key])
@@ -280,6 +282,7 @@ export const CraftSection: React.FC<{
                               )[0]?.image
                             }
                             className="crafting-card"
+                            onClick={() => onCraftChanged(item.key)}
                           >
                             {nftData[item.key].filter(
                               (f: any) => f.id === tItem

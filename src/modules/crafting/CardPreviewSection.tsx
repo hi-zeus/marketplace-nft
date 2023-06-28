@@ -93,7 +93,6 @@ export const CardPreviewSection: React.FC<{
           };
         }),
     ];
-    console.log(tempData);
     // }
     setNftData(tempData);
   }, []);

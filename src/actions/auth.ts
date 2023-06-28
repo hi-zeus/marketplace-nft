@@ -80,7 +80,6 @@ export const getMyNFTs = async () => {
   //   const res = await api.get("/me/nft");
 
   // return { success: true, data: res.data };
-  console.log(myNFTsData);
   return { success: true, data: myNFTsData };
   // } catch (error) {
   //   return { success: false, message: "Server Error!" };

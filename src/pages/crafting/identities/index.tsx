@@ -44,7 +44,6 @@ export const CraftingIdentitesPage: React.FC = () => {
 
   useEffect(() => {
     if (params.get("id")) {
-      console.log(params.get("id"));
       setClickedCard(params.get("id"));
     }
   }, [params]);
@@ -62,7 +61,7 @@ export const CraftingIdentitesPage: React.FC = () => {
     setSelectedCard(id);
   };
   const handleCraft = (page: "identity" | "prediction") => {
-    page === "identity" && craftIdentity();
+    // page === "identity" && craftIdentity();
   };
 
   const craftIdentity = async () => {

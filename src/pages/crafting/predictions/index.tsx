@@ -69,14 +69,14 @@ export const CraftingPredictionsPage: React.FC = () => {
     setSelectedCard(id);
   };
   const handleCraft = (page: "identity" | "prediction") => {
-    page === "prediction" && craftPrediction();
+    // page === "prediction" && craftPrediction();
   };
 
   const craftPrediction = async () => {
     const newCraft = {
       nft_card_crafting_id: Number(selectedCards.crafting),
       nft_card_identity_id: Number(selectedCards.identity),
-      nft_card_trigger_ids: [Number(selectedCards.trigger)],
+      nft_card_trigger_ids: selectedCards.trigger,
     };
     const res = await craftingPrediction(newCraft);
     if (res.success) {

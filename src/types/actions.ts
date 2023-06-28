@@ -28,7 +28,7 @@ export type IdentityCraftingParams = {
 
 export type PredictionCraftingParams = {
   nft_card_identity_id: number | string;
-  nft_card_trigger_ids: Array<number | string>;
+  nft_card_trigger_ids: Array<number | string | null>;
   nft_card_crafting_id: number | string;
 };
 

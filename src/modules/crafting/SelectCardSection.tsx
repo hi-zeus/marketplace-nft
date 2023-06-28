@@ -109,7 +109,7 @@ export const SelectCardSection: React.FC<{
             id: item.id,
             rarity: item.rarity,
             image: item.image,
-            name: item.category,
+            name: "Identity",
           };
         });
     } else if (selectedCraft === "trigger") {

@@ -1,5 +1,5 @@
 import React from "react";
 
-export const CardCategory: React.FC = () => {
+export const MyCardCategory: React.FC = () => {
   return <div>CardCategory: React.FC</div>;
 };

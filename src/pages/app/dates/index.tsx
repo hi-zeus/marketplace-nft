@@ -14,7 +14,7 @@ import {
   SellDateCardSection,
   ViewDateCardSection,
 } from "../../../modules";
-import { dateCardData } from "./data";
+// import { dateCardData } from "./data";
 import { useNavigate } from "react-router-dom";
 import { useMyNFTsContext } from "../../../context";
 

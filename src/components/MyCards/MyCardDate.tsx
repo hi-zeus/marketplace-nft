@@ -1,5 +1,5 @@
 import React from "react";
 
-export const CardDate: React.FC = () => {
+export const MyCardDate: React.FC = () => {
   return <div>CardDate: React.FC</div>;
 };

@@ -1,5 +1,5 @@
 import React from "react";
 
-export const CardPrediction: React.FC = () => {
+export const MyCardPrediction: React.FC = () => {
   return <div>CardPrediction: React.FC</div>;
 };

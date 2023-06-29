@@ -14,7 +14,7 @@ import {
   getMyNFTs,
   getMarketplaceList,
 } from "../actions";
-import { IArticle, IMarketplaceListing, IUser } from "../types/actions";
+import { IArticle, IUser } from "../types/actions";
 
 const AuthContext = createContext<any>({});
 const FeedContext = createContext<any>([]);
